@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+:root {
+  --main-bg: #121212; /*  Main BG */
+  --dark-section: #1A1A1A; /*  Dark sections */
+  --ui-element: #2E2E2E; /* Cards, UI elements */
+  --secondary: #D0D0D0; /* Secondary text */
+  --primary: #FAFAFA; /* Primary Text */
+}
+
+@theme inline {
+  --color-background: var(--main-bg);
+  --color-secondary: var(--secondary);
+  --color-primary: var(--primary);
+  --font-satoshi: var(--font-satoshi);
+  --font-cd: var(--font-clash-display);
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--main-bg);
+  color: var(--primary);
+  font-family: var(--font-satoshi), var(--font-cd), sans-serif;
+}
