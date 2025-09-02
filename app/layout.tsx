@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { satoshi, clashDisplay } from "@/lib/fonts";
 import "./globals.css";
 import Header from "@/components/Header";
+import { MenuProvider } from "@/context/MenuContext";
+import Menu from "@/components/Menu";
 
 export const metadata: Metadata = {
   title: "HLL0WRLD ©",
@@ -18,8 +20,11 @@ export default function RootLayout({
       <body
         className={`${satoshi.variable} ${clashDisplay.variable} antialiased`}
       >
+        <MenuProvider>
         <Header/>
+        <Menu />
         {children}
+        </MenuProvider>
       </body>
     </html>
   );
